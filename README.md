@@ -1,1 +1,4 @@
-# TOM_network
+# INSEAD Technology and Operations Management Research Network
+
+
+
