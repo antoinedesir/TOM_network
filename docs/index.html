@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-<htlm>
-    <head> 
-    <script src="jquery.js"></script> 
-    <script> 
-    $(function(){
-      $("#includedContent").load("network.html"); 
-    });
-    </script> 
-    <title>
-        INSEAD Technology and Operations Management Research Network
-    </title>
-    </head>
-    
-    <body>
-        <h1>
-            Hello world!
-        </h1>
-        <p>Welcome to this page </p>
-        <div id="includedContent"></div>
-    </body>
-
-</htlm>
-
+<html>
+<head>
+   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script>
+      $(function() {
+         $("#includeHtml").load("result.html");
+      });
+   </script>
+</head>
+<body>
+   <h2>Program to include another HTML file in this HTML using <i>JQuery load</i></h2>
+   <div id="includeHtml"></div>
+</body>
+</html>
