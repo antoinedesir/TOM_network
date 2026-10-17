@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alumni — TOM research, INSEAD</title>
+<meta name="description" content="Graduates of the doctoral programme in Technology and Operations Management at INSEAD.">
+<link rel="icon" href="assets/INSEAD.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=5">
+</head>
+<body>
+
+<script>
+(function () {
+  try {
+    var s = localStorage.getItem("theme");
+    if (s === "dark" || s === "light") document.documentElement.setAttribute("data-theme", s);
+  } catch (e) {}
+})();
+</script>
+
+<main class="page page-min">
+
+  <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch colour theme">
+    <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+    </svg>
+    <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="4.2"/>
+      <path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/>
+    </svg>
+  </button>
+
+  <header class="masthead">
+    <img class="crest" src="assets/INSEAD.png" alt="INSEAD" onerror="this.remove()">
+    <div>
+      <h1>Alumni</h1>
+      <p class="role">
+        Technology and Operations Management,
+        <a href="https://www.insead.edu">INSEAD</a>
+      </p>
+      <nav class="nav" aria-label="Sections">
+        <a href="index.html">Network</a>
+        <a href="papers.html">Publications</a>
+        <a href="alumni.html">Alumni</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="body">
+      <div class="tabs sticky-tabs" id="tabs" role="tablist"></div>
+      <div id="panel"></div>
+    </div>
+  </section>
+  <footer class="foot">
+    <div>
+      <p class="upd">INSEAD · Technology and Operations Management · updated September 2026</p>
+      <div class="foot-nav">
+        <a href="index.html">Network</a>
+        <a href="papers.html">Publications</a>
+        <a href="alumni.html">Alumni</a>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script src="data/program.js"></script>
+<script src="data/faculty.js"></script>
+<script src="data/alumni.js"></script>
+<script src="assets/worldmap.js"></script>
+<script>
+window.PAGE = function (S) {
+  S.renderAlumniTabs('tabs', 'panel', { external: true });
+};
+</script>
+<script src="assets/site.js"></script>
+</body>
+</html>
