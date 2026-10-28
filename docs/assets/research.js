@@ -261,12 +261,10 @@
 
     /* ---- stats ---- */
     if (statsHost) {
-      var joint = {};
-      facEdges.forEach(function (e) { e.ids.forEach(function (id) { joint[id] = 1; }); });
       statsHost.innerHTML = '<div class="tiles">' +
         tile(faculty.length, "faculty") +
         tile(G.nodes.length - faculty.length, "coauthors") +
-        tile(Object.keys(joint).length, "papers with two or more TOM faculty") +
+        tile(papers().length, "papers") +
       "</div>";
     }
     function tile(v, l) {
