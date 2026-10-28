@@ -881,9 +881,9 @@
       wake();
     }
     tabs.innerHTML =
+      '<button type="button" role="tab" data-id="full" title="Faculty with all their coauthors">All</button>' +
       '<button type="button" role="tab" data-id="faculty" title="TOM faculty only">Faculty</button>' +
-      '<button type="button" role="tab" data-id="phd" title="Faculty with TOM PhD students and alumni">PhD</button>' +
-      '<button type="button" role="tab" data-id="full" title="Faculty with all their coauthors">All</button>';
+      '<button type="button" role="tab" data-id="phd" title="Faculty with TOM PhD students and alumni">PhD</button>';
     tabs.addEventListener("click", function (e) {
       var b = e.target.closest("button");
       if (b) setMode(b.dataset.id, true);
@@ -912,7 +912,7 @@
     document.addEventListener("visibilitychange", function () { if (!document.hidden) wake(); });
 
     var hash = (location.hash || "").slice(1).split("/");
-    setMode(VIEW_KEY[hash[0]] ? hash[0] : "faculty", false);
+    setMode(VIEW_KEY[hash[0]] ? hash[0] : "full", false);
     var pre = hash[1] && G.nodes.filter(function (n) { return slug(n.name) === hash[1]; })[0];
     if (pre && isVisible(pre)) select(pre, mode === "full");
     else showDetail(null);
